@@ -16,10 +16,10 @@ body {
 }
 body {
    background-color: rgb(248, 217, 222);
+   font-size: 16px;
 }
 main {
     height: auto;
-    background-color: rgb(248, 217, 222);
     padding-top: 80px;
 }
 /* header*/
@@ -51,7 +51,6 @@ header ul {
  /* banner*/
  .banner {
     margin-bottom: 50px;
-    background-color: red;
     height: 500px;
     background-image: url(images/default.jpg);
     background-position: center;
@@ -95,8 +94,9 @@ header ul {
    background-color: white;
    padding: 30px;
    text-align: center;
+   border-radius: 8px;
  }
- .book-img {
+ .home-book-img {
    margin: 0 auto 15px;
    height: 200px;
    display: flex;
@@ -113,10 +113,9 @@ header ul {
    font-size: 1.125rem;
    font-weight: bold;
    margin-bottom: 10px;
+   cursor: pointer;
  }
  .home-book-author {
-   color: #515151;
-   font-style: italic;
    margin-bottom: 12px;
  }
 
@@ -132,27 +131,26 @@ header ul {
   width: 12px;
   height: 12px;
   border-radius: 12px;
-  background-color: #09de29;
  }
  .home-book-price .dispo.book-available {
   background-color: #09de29;
  }
 
- .home-home-book-price .dispo.book-unavailable {
+ .home-book-price .dispo.book-unavailable {
   background-color: red;
  }
 
- .home-book-cart {
+ .book-add-cart {
   padding: 10px 30px;
   color: #fff;
   background-color: #04424f;
   border: 0;
-  border-radius: 8px;
   font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
  }
 
- .home-book-cart.book-unavailable,
+ .book-cart.book-unavailable,
  .home-book-stock.book-available{
   display: none;
  }
@@ -172,8 +170,12 @@ header ul {
  section.book-spotlight {
    padding: 50px;
    display: flex;
+   align-items: center;
  }
 
+ .book-spotlight-left img {
+  width: 400px;
+ }
  .book-spotlight-right {
    margin: 50px 0 0 50px;
    font-size: 1.2rem;
@@ -206,3 +208,55 @@ header ul {
   margin-bottom: 10px;
  }
  
+ /* Cart */
+
+ .book-cart {
+  background-color:#fff;
+  padding:50px;
+  margin-top:50px;
+}
+
+.book-cart-title {
+  font-size: 1.5rem;
+  margin-bottom:20px;
+}
+
+.book-cart-item {
+  margin-bottom:10px;
+  display: flex;
+}
+
+.book-cart-item-left {
+  margin-right:10px;
+}
+
+.book-cart-item-left img {
+  width:100px;
+}
+
+.book-cart-item-right {
+  margin-top:10px;
+}
+
+.book-cart-item-right-title {
+  font-weight:bold;
+  margin-bottom:5px;
+  font-size:1.1rem;
+}
+
+.book-cart-item-right-author,
+.book-cart-item-right-quantity {
+  margin-bottom:10px;
+}
+
+.book-cart-item-right-price {
+  font-weight: bold;
+  font-size:1.5rem;
+  color: #e85d00;
+}
+
+.book-cart-total {
+  margin-top:20px;
+  font-size:1.3rem;
+  font-weight: bold;
+}
